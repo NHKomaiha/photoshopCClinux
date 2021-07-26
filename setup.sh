@@ -46,9 +46,9 @@ function run_script() {
         echo "${script_path} Found..."
         chmod +x "${script_path}"
     else
-        error "${script_path} not Found..."    
+        error "${script_name} not Found..."    
     fi
-    cd "./scripts/" && bash "${script_path}"
+    cd "./scripts/" && bash "${script_name}"
     unset script_path
 }
 

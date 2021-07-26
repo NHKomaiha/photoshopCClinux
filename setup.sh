@@ -14,20 +14,20 @@ function main() {
     1)  
         echo "run photoshop CC Installation..."
         echo -n "using winetricks for component installation..."
-        run_script "scripts/PhotoshopSetup.sh" "PhotoshopSetup.sh"
+        run_script "${PWD}/scripts/PhotoshopSetup.sh" "PhotoshopSetup.sh"
         ;;
     2)  
         echo -n "run adobe camera Raw installer"
-        run_script "scripts/cameraRawInstaller.sh" "cameraRawInstaller.sh"
+        run_script "${PWD}/scripts/cameraRawInstaller.sh" "cameraRawInstaller.sh"
         ;;
     3)  
         echo "run winecfg..."
         echo -n "open virtualdrive configuration..."
-        run_script "scripts/winecfg.sh" "winecfg.sh"
+        run_script "${PWD}/scripts/winecfg.sh" "winecfg.sh"
         ;;
     4)  
         echo -n "uninstall photoshop CC ..."
-        run_script "scripts/uninstaller.sh" "uninstaller.sh"
+        run_script "${PWD}/scripts/uninstaller.sh" "uninstaller.sh"
         ;;
     5)  
         echo "exit setup..."

@@ -42,13 +42,13 @@ function run_script() {
     local script_name=$2
 
     wait_second 5
-    if [ -f "$script_path" ];then
-        echo "$script_path Found..."
-        chmod +x "$script_path"
+    if [ -f "${script_path}" ];then
+        echo "${script_path} Found..."
+        chmod +x "${script_path}"
     else
-        error "$script_name not Found..."    
+        error "${script_path} not Found..."    
     fi
-    cd "./scripts/" && bash $script_name
+    cd "./scripts/" && bash "${script_path}"
     unset script_path
 }
 
@@ -77,10 +77,10 @@ function exitScript() {
 }
 
 function banner() {
-    local banner_path="$PWD/images/banner"
-    if [ -f $banner_path ];then 
+    local banner_path="${PWD}/images/banner"
+    if [ -f "${banner_path}" ];then 
         clear && echo ""
-        cat $banner_path
+        cat "${banner_path}"
         echo ""
     else
         error "banner not Found..."
